@@ -11,13 +11,13 @@ module "group_organization-admins" {
   members      = ["dgourillon-aliases@dgourillon1.joonix.net"]
 }
 
-resource "googleworkspace_user" "dwight" {
-  primary_email = "test@dgourillon1.joonix.net"
+resource "googleworkspace_user" "test" {
+  primary_email = "org-admin@dgourillon1.joonix.net"
   password      = var.default_password
 
   name {
-    family_name = "test"
-    given_name  = "test"
+    family_name = "org-admin@"
+    given_name  = "org-admin@"
   }
 
   recovery_email = "dgourillon@google.com"
