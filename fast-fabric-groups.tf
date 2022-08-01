@@ -13,7 +13,7 @@ module "group_organization-admins" {
 
 resource "googleworkspace_user" "dwight" {
   primary_email = "test@dgourillon1.joonix.net"
-  password      = "testpassword"
+  password      = var.default_password
 
   name {
     family_name = "test"
