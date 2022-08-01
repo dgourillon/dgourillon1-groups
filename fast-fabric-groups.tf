@@ -6,7 +6,7 @@ module "group_organization-admins" {
   id           = "gcp-organization-admins@dgourillon1.joonix.net"
   display_name = "gcp-organization-admins"
   description  = "gcp-organization-admins"
-  owners       = ["tf-cloud-sa@ci-groups-dgo1.iam.gserviceaccount.com","dgourillon@dgourillon1.joonix.net"]
+  owners       = ["tf-cloud-sa@ci-groups-dgo1.iam.gserviceaccount.com"]
   domain       = "dgourillon1.joonix.net"
   members      = ["dgourillon-aliases@dgourillon1.joonix.net"]
 }
@@ -18,7 +18,7 @@ module "group_gcp-devops" {
   id           = "gcp-gcp-devops@dgourillon1.joonix.net"
   display_name = "gcp-gcp-devops"
   description  = "gcp-gcp-devops"
-  owners       = ["tf-cloud-sa@ci-groups-dgo1.iam.gserviceaccount.com","dgourillon@dgourillon1.joonix.net"]
+  owners       = ["tf-cloud-sa@ci-groups-dgo1.iam.gserviceaccount.com"]
   domain       = "dgourillon1.joonix.net"
   members      = ["dgourillon-aliases@dgourillon1.joonix.net"]
 }
@@ -30,7 +30,7 @@ module "group_gcp-devops" {
   id           = "gcp-network-admins@dgourillon1.joonix.net"
   display_name = "gcp-network-admins"
   description  = "gcp-network-admins"
-  owners       = ["tf-cloud-sa@ci-groups-dgo1.iam.gserviceaccount.com","dgourillon@dgourillon1.joonix.net"]
+  owners       = ["tf-cloud-sa@ci-groups-dgo1.iam.gserviceaccount.com"]
   domain       = "dgourillon1.joonix.net"
   members      = ["dgourillon-aliases@dgourillon1.joonix.net"]
 }
@@ -42,7 +42,7 @@ module "group_security-admins" {
   id           = "gcp-security-admins@dgourillon1.joonix.net"
   display_name = "gcp-security-admins"
   description  = "gcp-security-admins"
-  owners       = ["tf-cloud-sa@ci-groups-dgo1.iam.gserviceaccount.com","dgourillon@dgourillon1.joonix.net"]
+  owners       = ["tf-cloud-sa@ci-groups-dgo1.iam.gserviceaccount.com"]
   domain       = "dgourillon1.joonix.net"
   members      = ["dgourillon-aliases@dgourillon1.joonix.net"]
 }
@@ -54,7 +54,7 @@ module "group_support" {
   id           = "gcp-support@dgourillon1.joonix.net"
   display_name = "gcp-support"
   description  = "gcp-support"
-  owners       = ["tf-cloud-sa@ci-groups-dgo1.iam.gserviceaccount.com","dgourillon@dgourillon1.joonix.net"]
+  owners       = ["tf-cloud-sa@ci-groups-dgo1.iam.gserviceaccount.com"]
   domain       = "dgourillon1.joonix.net"
   members      = ["dgourillon-aliases@dgourillon1.joonix.net"]
 }
