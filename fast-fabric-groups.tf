@@ -8,7 +8,7 @@ module "group_organization-admins" {
   description  = "gcp-organization-admins"
   owners       = ["tf-cloud-sa@ci-groups-dgo1.iam.gserviceaccount.com","dgourillon@dgourillon1.joonix.net"]
   domain       = "dgourillon1.joonix.net"
-  members      = ["dgourillon@dgourillon1.joonix.net","dgourillon-aliases@dgourillon1.joonix.net"]
+  members      = ["dgourillon-aliases@dgourillon1.joonix.net"]
 }
 
 module "group_gcp-devops" {
@@ -20,7 +20,7 @@ module "group_gcp-devops" {
   description  = "gcp-gcp-devops"
   owners       = ["tf-cloud-sa@ci-groups-dgo1.iam.gserviceaccount.com","dgourillon@dgourillon1.joonix.net"]
   domain       = "dgourillon1.joonix.net"
-  members      = ["dgourillon@dgourillon1.joonix.net","dgourillon-aliases@dgourillon1.joonix.net"]
+  members      = ["dgourillon-aliases@dgourillon1.joonix.net"]
 }
 
  module "group_network-admins" {
@@ -32,7 +32,7 @@ module "group_gcp-devops" {
   description  = "gcp-network-admins"
   owners       = ["tf-cloud-sa@ci-groups-dgo1.iam.gserviceaccount.com","dgourillon@dgourillon1.joonix.net"]
   domain       = "dgourillon1.joonix.net"
-  members      = ["dgourillon@dgourillon1.joonix.net","dgourillon-aliases@dgourillon1.joonix.net"]
+  members      = ["dgourillon-aliases@dgourillon1.joonix.net"]
 }
 
 module "group_security-admins" {
@@ -44,7 +44,7 @@ module "group_security-admins" {
   description  = "gcp-security-admins"
   owners       = ["tf-cloud-sa@ci-groups-dgo1.iam.gserviceaccount.com","dgourillon@dgourillon1.joonix.net"]
   domain       = "dgourillon1.joonix.net"
-  members      = ["dgourillon@dgourillon1.joonix.net","dgourillon-aliases@dgourillon1.joonix.net"]
+  members      = ["dgourillon-aliases@dgourillon1.joonix.net"]
 }
 
 module "group_support" {
@@ -56,5 +56,5 @@ module "group_support" {
   description  = "gcp-support"
   owners       = ["tf-cloud-sa@ci-groups-dgo1.iam.gserviceaccount.com","dgourillon@dgourillon1.joonix.net"]
   domain       = "dgourillon1.joonix.net"
-  members      = ["dgourillon@dgourillon1.joonix.net","dgourillon-aliases@dgourillon1.joonix.net"]
+  members      = ["dgourillon-aliases@dgourillon1.joonix.net"]
 }
