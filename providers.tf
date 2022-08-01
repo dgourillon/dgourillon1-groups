@@ -6,7 +6,7 @@ provider "google-beta" {
 
 provider "googleworkspace" {
   #billing_project       = var.project_id
-  
+  customer_id  = var.customer_id
 
 }
 
