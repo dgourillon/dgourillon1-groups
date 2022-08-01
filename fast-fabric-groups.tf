@@ -11,6 +11,19 @@ module "group_organization-admins" {
   members      = ["dgourillon-aliases@dgourillon1.joonix.net"]
 }
 
+resource "googleworkspace_user" "dwight" {
+  primary_email = "test@dgourillon1.joonix.net"
+  password      = "testpassword"
+
+  name {
+    family_name = "test"
+    given_name  = "test"
+  }
+
+  recovery_email = "dgourillon@google.com"
+}
+
+
 module "group_gcp-devops" {
   source  = "terraform-google-modules/group/google"
   version = "~> 0.4"
