@@ -4,7 +4,7 @@ locals {
 
 }
 
-module "team_a_groups" {
+module "team_b_groups" {
   source  = "terraform-google-modules/group/google"
   version = "~> 0.4"
   for_each = toset(local.group_list_team_b)
@@ -20,7 +20,7 @@ module "team_a_groups" {
   ]
 }
 
-resource "googleworkspace_user" "team_a_users" {
+resource "googleworkspace_user" "team_b_users" {
   for_each = toset(local.group_list_team_b)
   primary_email = "${each.key}-user@dgourillon1.joonix.net"
   password      = var.default_password
