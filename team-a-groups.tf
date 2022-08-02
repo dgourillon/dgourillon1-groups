@@ -1,13 +1,13 @@
 locals {
 
-  group_list = ["gcp-team-a","gcp-team-a-admin"]
+  group_list_team_a = ["gcp-team-a","gcp-team-a-admin"]
 
 }
 
 module "team_a_groups" {
   source  = "terraform-google-modules/group/google"
   version = "~> 0.4"
-  for_each = toset(local.group_list)
+  for_each = toset(local.group_list_team_a)
 
   id           = "${each.key}@dgourillon1.joonix.net"
   display_name = "${each.key}"
@@ -21,7 +21,7 @@ module "team_a_groups" {
 }
 
 resource "googleworkspace_user" "team_a_users" {
-  for_each = toset(local.group_list)
+  for_each = toset(local.group_list_team_a)
   primary_email = "${each.key}-user@dgourillon1.joonix.net"
   password      = var.default_password
 
