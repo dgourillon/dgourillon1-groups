@@ -14,9 +14,9 @@ module "team_b_groups" {
   description  = "${each.key}"
   owners       = ["tf-cloud-sa@ci-groups-dgo1.iam.gserviceaccount.com"]
   domain       = "dgourillon1.joonix.net"
-  members      = ["dgourillon-aliases@dgourillon1.joonix.net"]
+  members      = ["dgourillon-aliases@dgourillon1.joonix.net","${each.key}-user@dgourillon1.joonix.net"]
   depends_on = [
-    googleworkspace_user.fast_fabric_users
+    googleworkspace_user.team_b_users
   ]
 }
 
