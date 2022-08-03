@@ -30,7 +30,7 @@ resource "googleworkspace_user" "fast_fabric_users" {
     family_name = "${each.key}"
     given_name  = "${each.key}"
   }
-
+  suspended = true
   recovery_email = "dgourillon@google.com"
 }
 

@@ -29,7 +29,7 @@ resource "googleworkspace_user" "team_b_users" {
     family_name = "${each.key}"
     given_name  = "${each.key}"
   }
-
+  suspended = true
   recovery_email = "dgourillon@google.com"
 }
 
