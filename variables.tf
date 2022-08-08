@@ -36,6 +36,13 @@ variable "default_group_member" {
 
 }
 
+variable "default_group_members" {
+
+  description = "Default email addresses to set in the groups"
+  type        = list(string)
+  default     = null
+}
+
 variable "group_deployment_deployment_sa" {
 
   description = "owner SA for the groups"
