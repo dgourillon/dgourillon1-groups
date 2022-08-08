@@ -13,9 +13,9 @@ module "fast_fabric_groups" {
   id           = "${each.key}@${var.organization.domain}"
   display_name = "${each.key}"
   description  = "${each.key}"
-  owners       = ["${var.group_deployment_deployment_sa}"]
+  owners       = ["tf-cloud-sa@ci-groups-dgo1.iam.gserviceaccount.com"]
   domain       = "${var.organization.domain}"
-  members      = ["dgourillon-aliases@${var.organization.domain}","${each.key}-user@${var.organization.domain}"]
+  members      = [var.default_group_members,"${each.key}-user@${var.organization.domain}"]
   depends_on = [
     googleworkspace_user.fast_fabric_users
   ]

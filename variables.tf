@@ -36,12 +36,11 @@ variable "default_group_member " {
 
 }
 
-variable "default_group_member " {
+variable "group_deployment_deployment_sa " {
 
-  description = "Default email addresses to set in the groups"
+  description = "owner SA for the groups"
   type        = string
-  default     = null
+
 
 }
 
-sed 's/${var.group_deployment_deployment_sa}/${var.group_deployment_deployment_sa}/g' ./*.tf
