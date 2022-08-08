@@ -13,7 +13,7 @@ module "fast_fabric_groups" {
   id           = "${each.key}@${var.organization.domain}"
   display_name = "${each.key}"
   description  = "${each.key}"
-  owners       = ["tf-cloud-sa@ci-groups-dgo1.iam.gserviceaccount.com"]
+  owners       = ["${var.group_deployment_deployment_sa}"]
   domain       = "${var.organization.domain}"
   members      = ["dgourillon-aliases@${var.organization.domain}","${each.key}-user@${var.organization.domain}"]
   depends_on = [
@@ -31,6 +31,6 @@ resource "googleworkspace_user" "fast_fabric_users" {
     given_name  = "${each.key}"
   }
   suspended = true
-  recovery_email = "dgourillon@google.com"
+  recovery_email = "${var.default_recovery_email}"
 }
 

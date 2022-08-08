@@ -20,3 +20,28 @@ variable "organization" {
     customer_id = string
   })
 }
+
+variable "default_recovery_email" {
+
+  description = "Default recovery email for the created user"
+  type        = string
+
+}
+
+variable "default_group_member " {
+
+  description = "Default email addresses to set in the groups"
+  type        = string
+  default     = null
+
+}
+
+variable "default_group_member " {
+
+  description = "Default email addresses to set in the groups"
+  type        = string
+  default     = null
+
+}
+
+sed 's/${var.group_deployment_deployment_sa}/${var.group_deployment_deployment_sa}/g' ./*.tf
