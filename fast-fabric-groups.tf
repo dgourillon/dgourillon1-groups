@@ -13,7 +13,7 @@ module "fast_fabric_groups" {
   id           = "${each.key}@${var.organization.domain}"
   display_name = "${each.key}"
   description  = "${each.key}"
-  owners       = ["tf-cloud-sa@ci-groups-dgo1.iam.gserviceaccount.com"]
+  owners       = ["${var.group_deployment_deployment_sa}"]
   domain       = "${var.organization.domain}"
   members      = [var.default_group_members,"${each.key}-user@${var.organization.domain}"]
   depends_on = [
