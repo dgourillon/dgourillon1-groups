@@ -14,7 +14,7 @@ module "team_b_groups" {
   description  = "${each.key}"
   owners       = ["${var.group_deployment_deployment_sa}"]
   domain       = "${var.organization.domain}"
-  members      = [var.default_group_members,"${each.key}-user@${var.organization.domain}"]
+  members      = [var.default_group_member,"${each.key}-user@${var.organization.domain}"]
   depends_on = [
     googleworkspace_user.team_b_users
   ]
