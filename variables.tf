@@ -28,7 +28,7 @@ variable "default_recovery_email" {
 
 }
 
-variable "default_group_member " {
+variable "default_group_member" {
 
   description = "Default email addresses to set in the groups"
   type        = string
