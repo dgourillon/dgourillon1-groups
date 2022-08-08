@@ -11,3 +11,12 @@ variable "customer_id" {
   type        = string
 
 }
+
+variable "organization" {
+  description = "Organization details."
+  type = object({
+    domain      = string
+    id          = number
+    customer_id = string
+  })
+}
