@@ -36,7 +36,7 @@ variable "default_group_member" {
 
 }
 
-variable "group_deployment_deployment_sa " {
+variable "group_deployment_deployment_sa" {
 
   description = "owner SA for the groups"
   type        = string
