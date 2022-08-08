@@ -9,12 +9,12 @@ module "team_a_groups" {
   version = "~> 0.4"
   for_each = toset(local.group_list_team_a)
 
-  id           = "${each.key}@dgourillon1.joonix.net"
+  id           = "${each.key}@${var.organization.domain}"
   display_name = "${each.key}"
   description  = "${each.key}"
   owners       = ["tf-cloud-sa@ci-groups-dgo1.iam.gserviceaccount.com"]
-  domain       = "dgourillon1.joonix.net"
-  members      = ["dgourillon-aliases@dgourillon1.joonix.net","${each.key}-user@dgourillon1.joonix.net"]
+  domain       = "${var.organization.domain}"
+  members      = ["dgourillon-aliases@${var.organization.domain}","${each.key}-user@${var.organization.domain}"]
   depends_on = [
     googleworkspace_user.team_a_users
   ]
@@ -22,7 +22,7 @@ module "team_a_groups" {
 
 resource "googleworkspace_user" "team_a_users" {
   for_each = toset(local.group_list_team_a)
-  primary_email = "${each.key}-user@dgourillon1.joonix.net"
+  primary_email = "${each.key}-user@${var.organization.domain}"
   password      = var.default_password
 
   name {
