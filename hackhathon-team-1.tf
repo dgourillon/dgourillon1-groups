@@ -20,16 +20,3 @@ module "team_hackathon_groups" {
   ]
 }
 
-resource "googleworkspace_user" "team_hackathon_users" {
-  for_each = toset(local.group_list_team_hackathon)
-  primary_email = "${each.key}-user@${var.organization.domain}"
-  password      = var.default_password
-
-  name {
-    family_name = "${each.key}"
-    given_name  = "${each.key}"
-  }
-  suspended = true
-  recovery_email = "${var.default_recovery_email}"
-}
-
